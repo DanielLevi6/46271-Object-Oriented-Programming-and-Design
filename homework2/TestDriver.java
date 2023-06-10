@@ -282,11 +282,31 @@ public class TestDriver {
   	private void findPath(String graphName, List<String> sourceArgs,
   						  List<String> destArgs) {
   		// TODO: Insert your code here.
-  		   
-  		// ___ = graphs.get(graphName);
-  		// ___ = nodes.get(sourceArgs.get(i));
-  		// ___ = nodes.get(destArgs.get(i));
-  		// output.println(...);	
+		Graph<WeightedNode> graph = graphs.get(graphName);
+
+		Set<WeightedNodePath> starts = new HashSet<WeightedNodePath>();
+		for(int i = 0; i < sourceArgs.size(); i++) {
+			starts.add(new WeightedNodePath(nodes.get(sourceArgs.get(i))));
+		}
+
+		Set<WeightedNode> ends = new HashSet<WeightedNode>();
+		for(int i = 0; i < destArgs.size(); i++) {
+			ends.add(nodes.get(destArgs.get(i)));
+		}
+
+		PathFinder<WeightedNode, WeightedNodePath> finder = new PathFinder<WeightedNode, WeightedNodePath>(graph);
+		WeightedNodePath shortestPath = finder.findPath(starts, ends);
+		if(shortestPath != null) {
+			String nodesString = "";
+			Iterator<WeightedNode> nodesIter = shortestPath.iterator();
+			while(nodesIter.hasNext()) {
+				nodesString += " " + nodesIter.next().getName();
+			}
+			output.println("shortest path in " + graphName + ":" + nodesString);
+		}
+		else {
+			output.println("no path found in " + graphName);
+		}
   	}
 
 
