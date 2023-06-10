@@ -3,83 +3,110 @@ package homework2;
 import java.util.*;
 
 /** The Graph class is an immutable generic class that represents a directed graph.
+ *
  * A directed graph is constructed of nodes, which might be connected through edges.
  * Every edge has a specific direction, from node A to node B.
- * The class provides methods to add or remove nodes and edges. In addition to methods for
- * getting the list of nodes and the list of children in the graph.
+ *
+ * The class provides methods to add nodes and edges to the graph. In addition to methods to
+ * get the list of nodes and the list of node's children.
+ *
+ * Node - the node's class
  */
 public final class Graph<Node> {
+    // Abstraction Function:
+    // A node in the graph is represented as a key of the nodesAdjacencyMap map
+    // An edge from A to B is represented as by the presence of B in A's adjacency set(the value of the map's key A)
+
+    // Representation invariant:
+    //      name != null
+    //      for every Node n in map's keys:
+    //           n exists in only one copy
+    //      for every set of node's children:
+    //           each child node n exists as only one copy
     private final Map<Node, Set<Node>> nodesAdjacencyMap;
     private final String name;
-
-    // Abstruction Function:
-    //
-    //
-
-    // Representation invariant for every Graph g:
-    //
-    //
-
-
-    // Creators - methods which creates new representation of the ADT(constructors)
 
     /**
      * Constructs a new Graph
      * @effects Makes a new graph with the specified name
-     *          If the name is NaN, so an empty string will be placed.
+     *          If the name is null, so an empty string will be placed.
      * @param name - the name of the new Graph object
      */
     public Graph(String name) {
         this.nodesAdjacencyMap = new HashMap<>();
-        this.name = name;
+        if(name != null) {
+            this.name = name;
+        }
+        else {
+            this.name = "";
+        }
         this.checkRep();
     }
 
-    // Observers - methods for sending information about the object(without changing it)
-    // Mutators - methods which changes the state of the object(just in mutable objects)
-
-    // Producers - methods which creates new representations of the ADT using representation of the ADT(just in immutable objects)
-
     /**
-     * @requires requirements. Inputs thaat the methos is not applied on
-     * @modifies the names of the objects ehich are not being modified
-     * @effects the behaviour of the method for all the inputs which are not being removed by @requires
-     *
-     * @param
-     * @return
-     * @throws
+     * @return the graph's name
      */
     public String getName() {
         this.checkRep();
         return this.name;
     }
 
-
-    public boolean addNode(Node new_node) {
+    /**
+     * @requires new_node != null
+     * @modifies this
+     * @effects adds new_node to nodesAdjacencyMap as a key
+     *
+     * @param new_node to add to the graph
+     */
+    public void addNode(Node new_node) {
         this.checkRep();
         this.nodesAdjacencyMap.put(new_node, new HashSet<Node>());
         this.checkRep();
-        return true;
     }
 
-    public boolean addEdge(Node parent_node, Node child_node) {
+    /**
+     * @requires (parent_node != null) && (child_node != null) && (parent_node and child_node are part of the graph)
+     * @modifies this
+     * @effects adds child_node to the parent_node's adjacency set(this.nodeAdjacencyMap.get(parent_node))
+     *
+     * @param parent_node the node which the edge starts from.
+*             child_node the node which the edge ends in.
+     */
+    public void addEdge(Node parent_node, Node child_node) {
         this.checkRep();
         this.nodesAdjacencyMap.get(parent_node).add(child_node);
         this.checkRep();
-        return true;
     }
 
+    /**
+     * @requires parent_node != null
+     *
+     * @param parent_node the node whose children's iterator we want
+     * @return an iterator for the parent_node's children
+     */
     public Iterator<Node> getChildren(Node parent_node) {
         this.checkRep();
         return this.nodesAdjacencyMap.get(parent_node).iterator();
     }
 
+    /**
+     * @return an iterator for all the nodes in the graph
+     */
     public Iterator<Node> getNodes() {
         this.checkRep();
         return this.nodesAdjacencyMap.keySet().iterator();
     }
 
+    /**
+     * @effects checks the Rep. Invariant on the object, and throws an error accordingly
+     *
+     * @throws AssertionError if the Rep. Invariant was not fulfilled
+     */
     private void checkRep() {
-
+        assert(this.name != null);
+        // All the other requirements holds because of the data structures-
+        // If the same node will be added to the graph, so the HashMap would replace the previous one(and it's value).
+        // If the same node will be added to an adjacent set of a node, it wouldn't insert it again, because of the Set
+        // definition.
     }
 }
