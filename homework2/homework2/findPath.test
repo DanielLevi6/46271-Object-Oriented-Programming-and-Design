@@ -1,0 +1,26 @@
+# findPath test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 4
+CreateNode node2 3
+CreateNode node3 6
+CreateNode node4 1
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+
+# Add an edge
+AddEdge myGraph node1 node2
+AddEdge myGraph node1 node3
+AddEdge myGraph node2 node3
+AddEdge myGraph node2 node4
+AddEdge myGraph node3 node4
+AddEdge myGraph node4 node4
+
+# Find a path
+FindPath myGraph node1 -> node4

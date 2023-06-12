@@ -1,0 +1,20 @@
+# noPath test file
+
+# Create a graph
+created graph myGraph
+
+# Add nodes
+created node node1 with cost 5
+created node node2 with cost 10
+created node node3 with cost 1
+
+added node node1 to myGraph
+added node node2 to myGraph
+added node node3 to myGraph
+
+# Add an edge
+added edge from node1 to node2 in myGraph
+added edge from node1 to node3 in myGraph
+
+# Find a path
+no path found in myGraph

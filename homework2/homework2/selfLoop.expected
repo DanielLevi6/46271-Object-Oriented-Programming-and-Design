@@ -1,0 +1,18 @@
+# selfLoop test file
+
+# Create a graph
+created graph myGraph
+
+# Add a node
+created node n1 with cost 5
+added node n1 to myGraph
+
+# Add a self-loop
+added edge from n1 to n1 in myGraph
+
+# Print some stuff
+myGraph contains: n1
+the children of n1 in myGraph are: n1
+
+# Find a path
+shortest path in myGraph: n1

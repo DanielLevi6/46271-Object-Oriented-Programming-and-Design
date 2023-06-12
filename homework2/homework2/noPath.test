@@ -1,0 +1,20 @@
+# noPath test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 5
+CreateNode node2 10
+CreateNode node3 1
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+
+# Add an edge
+AddEdge myGraph node1 node2
+AddEdge myGraph node1 node3
+
+# Find a path
+FindPath myGraph node2 -> node3

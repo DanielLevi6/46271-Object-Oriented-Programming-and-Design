@@ -1,0 +1,161 @@
+# massivlyConnectedGraphTest test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 1
+CreateNode node2 2
+CreateNode node3 2
+CreateNode node4 3
+CreateNode node5 2
+CreateNode node6 4
+CreateNode node7 5
+CreateNode node8 6
+CreateNode node9 4
+CreateNode node10 3
+CreateNode node11 2
+CreateNode node12 4
+CreateNode node13 1
+CreateNode node14 1
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+AddNode myGraph node5
+AddNode myGraph node6
+AddNode myGraph node7
+AddNode myGraph node8
+AddNode myGraph node9
+AddNode myGraph node10
+AddNode myGraph node11
+AddNode myGraph node12
+AddNode myGraph node13
+AddNode myGraph node14
+
+# Add an edge
+AddEdge myGraph node1 node1
+AddEdge myGraph node1 node2
+AddEdge myGraph node1 node3
+AddEdge myGraph node1 node4
+AddEdge myGraph node1 node5
+AddEdge myGraph node1 node6
+AddEdge myGraph node1 node7
+AddEdge myGraph node1 node8
+AddEdge myGraph node1 node9
+AddEdge myGraph node1 node10
+AddEdge myGraph node1 node11
+AddEdge myGraph node1 node12
+AddEdge myGraph node1 node13
+AddEdge myGraph node2 node2
+AddEdge myGraph node2 node3
+AddEdge myGraph node2 node4
+AddEdge myGraph node2 node5
+AddEdge myGraph node2 node6
+AddEdge myGraph node2 node7
+AddEdge myGraph node2 node8
+AddEdge myGraph node2 node9
+AddEdge myGraph node2 node10
+AddEdge myGraph node2 node11
+AddEdge myGraph node2 node12
+AddEdge myGraph node2 node13
+AddEdge myGraph node2 node14
+AddEdge myGraph node3 node3
+AddEdge myGraph node3 node4
+AddEdge myGraph node3 node5
+AddEdge myGraph node3 node6
+AddEdge myGraph node3 node7
+AddEdge myGraph node3 node8
+AddEdge myGraph node3 node9
+AddEdge myGraph node3 node10
+AddEdge myGraph node3 node11
+AddEdge myGraph node3 node12
+AddEdge myGraph node3 node13
+AddEdge myGraph node3 node14
+AddEdge myGraph node4 node4
+AddEdge myGraph node4 node5
+AddEdge myGraph node4 node6
+AddEdge myGraph node4 node7
+AddEdge myGraph node4 node8
+AddEdge myGraph node4 node9
+AddEdge myGraph node4 node10
+AddEdge myGraph node4 node11
+AddEdge myGraph node4 node12
+AddEdge myGraph node4 node13
+AddEdge myGraph node4 node14
+AddEdge myGraph node5 node5
+AddEdge myGraph node5 node6
+AddEdge myGraph node5 node7
+AddEdge myGraph node5 node8
+AddEdge myGraph node5 node9
+AddEdge myGraph node5 node10
+AddEdge myGraph node5 node11
+AddEdge myGraph node5 node12
+AddEdge myGraph node5 node13
+AddEdge myGraph node5 node14
+AddEdge myGraph node6 node6
+AddEdge myGraph node6 node7
+AddEdge myGraph node6 node8
+AddEdge myGraph node6 node9
+AddEdge myGraph node6 node10
+AddEdge myGraph node6 node11
+AddEdge myGraph node6 node12
+AddEdge myGraph node6 node13
+AddEdge myGraph node6 node14
+AddEdge myGraph node7 node7
+AddEdge myGraph node7 node8
+AddEdge myGraph node7 node9
+AddEdge myGraph node7 node10
+AddEdge myGraph node7 node11
+AddEdge myGraph node7 node12
+AddEdge myGraph node7 node13
+AddEdge myGraph node7 node14
+AddEdge myGraph node8 node8
+AddEdge myGraph node8 node9
+AddEdge myGraph node8 node10
+AddEdge myGraph node8 node11
+AddEdge myGraph node8 node12
+AddEdge myGraph node8 node13
+AddEdge myGraph node8 node14
+AddEdge myGraph node9 node9
+AddEdge myGraph node9 node10
+AddEdge myGraph node9 node11
+AddEdge myGraph node9 node12
+AddEdge myGraph node9 node13
+AddEdge myGraph node9 node14
+AddEdge myGraph node10 node10
+AddEdge myGraph node10 node11
+AddEdge myGraph node10 node12
+AddEdge myGraph node10 node13
+AddEdge myGraph node10 node14
+AddEdge myGraph node11 node11
+AddEdge myGraph node11 node12
+AddEdge myGraph node11 node13
+AddEdge myGraph node11 node14
+AddEdge myGraph node12 node12
+AddEdge myGraph node12 node13
+AddEdge myGraph node12 node14
+AddEdge myGraph node13 node13
+AddEdge myGraph node13 node14
+AddEdge myGraph node14 node14
+
+# Print some stuff
+ListNodes myGraph
+ListChildren myGraph node1
+ListChildren myGraph node2
+ListChildren myGraph node3
+ListChildren myGraph node4
+ListChildren myGraph node5
+ListChildren myGraph node6
+ListChildren myGraph node7
+ListChildren myGraph node8
+ListChildren myGraph node9
+ListChildren myGraph node10
+ListChildren myGraph node11
+ListChildren myGraph node12
+ListChildren myGraph node13
+ListChildren myGraph node14
+
+# Find a path
+FindPath myGraph node1 -> node14 

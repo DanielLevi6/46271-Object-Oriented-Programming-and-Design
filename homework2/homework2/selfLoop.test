@@ -1,0 +1,18 @@
+# selfLoop test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add a node
+CreateNode n1 5
+AddNode myGraph n1
+
+# Add a self-loop
+AddEdge myGraph n1 n1
+
+# Print some stuff
+ListNodes myGraph
+ListChildren myGraph n1
+
+# Find a path
+FindPath myGraph n1 -> n1

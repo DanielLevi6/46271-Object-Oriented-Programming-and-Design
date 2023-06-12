@@ -1,0 +1,37 @@
+# multipleStartEndGoals test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 1
+CreateNode node2 2
+CreateNode node3 3
+CreateNode node4 4
+CreateNode node5 5
+CreateNode node6 6
+CreateNode node7 7
+CreateNode node8 8
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+AddNode myGraph node5
+AddNode myGraph node6
+AddNode myGraph node7
+AddNode myGraph node8
+
+# Add an edge
+AddEdge myGraph node1 node2
+AddEdge myGraph node1 node3
+AddEdge myGraph node1 node4
+AddEdge myGraph node2 node3
+AddEdge myGraph node3 node4
+AddEdge myGraph node2 node5
+AddEdge myGraph node1 node5
+AddEdge myGraph node1 node6
+AddEdge myGraph node5 node8
+
+# Find a path
+FindPath myGraph node1 node2 node3 -> node6 node7 node8

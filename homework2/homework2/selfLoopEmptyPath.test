@@ -1,0 +1,66 @@
+# selfLoopEmptyPath test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 3
+CreateNode node2 3
+CreateNode node3 3
+CreateNode node4 1
+CreateNode node5 1
+CreateNode node6 2
+CreateNode node7 4
+CreateNode node8 1
+CreateNode node9 2
+CreateNode node10 3
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+AddNode myGraph node5
+AddNode myGraph node6
+AddNode myGraph node7
+AddNode myGraph node8
+AddNode myGraph node9
+AddNode myGraph node10
+
+# Add an edge
+AddEdge myGraph node1 node2
+AddEdge myGraph node1 node3
+AddEdge myGraph node1 node4
+AddEdge myGraph node1 node5
+AddEdge myGraph node1 node6
+AddEdge myGraph node1 node7
+AddEdge myGraph node1 node8
+AddEdge myGraph node1 node9
+AddEdge myGraph node1 node10
+AddEdge myGraph node2 node3
+AddEdge myGraph node2 node4
+AddEdge myGraph node2 node5
+AddEdge myGraph node2 node6
+AddEdge myGraph node2 node7
+AddEdge myGraph node2 node8
+AddEdge myGraph node2 node9
+AddEdge myGraph node2 node10
+AddEdge myGraph node3 node4
+AddEdge myGraph node3 node5
+AddEdge myGraph node3 node6
+AddEdge myGraph node3 node7
+AddEdge myGraph node3 node8
+AddEdge myGraph node3 node9
+AddEdge myGraph node3 node10
+AddEdge myGraph node4 node5
+AddEdge myGraph node4 node6
+AddEdge myGraph node4 node7
+AddEdge myGraph node4 node8
+AddEdge myGraph node5 node6
+AddEdge myGraph node5 node7
+AddEdge myGraph node6 node6
+AddEdge myGraph node7 node7
+AddEdge myGraph node8 node6
+AddEdge myGraph node9 node7
+
+# Find a path
+FindPath myGraph node1 -> node1 

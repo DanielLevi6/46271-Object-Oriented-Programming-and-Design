@@ -1,0 +1,27 @@
+# multipleStartsAndGoalsSinglePath test file
+
+# Create node1 graph
+created graph myGraph
+
+# Add nodes
+created node node1 with cost 1
+created node node2 with cost 1
+created node node3 with cost 4
+created node node4 with cost 2
+created node node5 with cost 2
+
+added node node1 to myGraph
+added node node2 to myGraph
+added node node3 to myGraph
+added node node4 to myGraph
+added node node5 to myGraph
+
+# Add an edge
+added edge from node1 to node3 in myGraph
+added edge from node2 to node3 in myGraph
+added edge from node2 to node4 in myGraph
+added edge from node3 to node4 in myGraph
+added edge from node4 to node5 in myGraph
+
+# Find node1 path
+shortest path in myGraph: node4 node5

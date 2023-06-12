@@ -1,0 +1,26 @@
+# findPath test file
+
+# Create a graph
+created graph myGraph
+
+# Add nodes
+created node node1 with cost 4
+created node node2 with cost 3
+created node node3 with cost 6
+created node node4 with cost 1
+
+added node node1 to myGraph
+added node node2 to myGraph
+added node node3 to myGraph
+added node node4 to myGraph
+
+# Add an edge
+added edge from node1 to node2 in myGraph
+added edge from node1 to node3 in myGraph
+added edge from node2 to node3 in myGraph
+added edge from node2 to node4 in myGraph
+added edge from node3 to node4 in myGraph
+added edge from node4 to node4 in myGraph
+
+# Find a path
+shortest path in myGraph: node1 node2 node4

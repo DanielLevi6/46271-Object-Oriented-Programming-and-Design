@@ -1,0 +1,30 @@
+# threeStarts test file
+
+# Create a graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 4
+CreateNode node2 5
+CreateNode node3 2
+CreateNode node4 1
+CreateNode node5 3
+CreateNode node6 4
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+AddNode myGraph node5
+AddNode myGraph node6
+
+# Add an edge
+AddEdge myGraph node1 node2
+AddEdge myGraph node2 node3
+AddEdge myGraph node2 node4
+AddEdge myGraph node3 node4
+AddEdge myGraph node4 node5
+AddEdge myGraph node4 node6
+
+# Find a path
+FindPath myGraph node1 node2 node3 -> node6 

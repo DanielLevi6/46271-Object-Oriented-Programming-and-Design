@@ -1,0 +1,27 @@
+# multipleStartsAndGoalsSinglePath test file
+
+# Create node1 graph
+CreateGraph myGraph
+
+# Add nodes
+CreateNode node1 1
+CreateNode node2 1
+CreateNode node3 4
+CreateNode node4 2
+CreateNode node5 2
+
+AddNode myGraph node1
+AddNode myGraph node2
+AddNode myGraph node3
+AddNode myGraph node4
+AddNode myGraph node5
+
+# Add an edge
+AddEdge myGraph node1 node3
+AddEdge myGraph node2 node3
+AddEdge myGraph node2 node4
+AddEdge myGraph node3 node4
+AddEdge myGraph node4 node5
+
+# Find node1 path
+FindPath myGraph node1 node4 -> node2 node5 

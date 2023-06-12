@@ -1,0 +1,161 @@
+# massivlyConnectedGraphTest test file
+
+# Create a graph
+created graph myGraph
+
+# Add nodes
+created node node1 with cost 1
+created node node2 with cost 2
+created node node3 with cost 2
+created node node4 with cost 3
+created node node5 with cost 2
+created node node6 with cost 4
+created node node7 with cost 5
+created node node8 with cost 6
+created node node9 with cost 4
+created node node10 with cost 3
+created node node11 with cost 2
+created node node12 with cost 4
+created node node13 with cost 1
+created node node14 with cost 1
+
+added node node1 to myGraph
+added node node2 to myGraph
+added node node3 to myGraph
+added node node4 to myGraph
+added node node5 to myGraph
+added node node6 to myGraph
+added node node7 to myGraph
+added node node8 to myGraph
+added node node9 to myGraph
+added node node10 to myGraph
+added node node11 to myGraph
+added node node12 to myGraph
+added node node13 to myGraph
+added node node14 to myGraph
+
+# Add an edge
+added edge from node1 to node1 in myGraph
+added edge from node1 to node2 in myGraph
+added edge from node1 to node3 in myGraph
+added edge from node1 to node4 in myGraph
+added edge from node1 to node5 in myGraph
+added edge from node1 to node6 in myGraph
+added edge from node1 to node7 in myGraph
+added edge from node1 to node8 in myGraph
+added edge from node1 to node9 in myGraph
+added edge from node1 to node10 in myGraph
+added edge from node1 to node11 in myGraph
+added edge from node1 to node12 in myGraph
+added edge from node1 to node13 in myGraph
+added edge from node2 to node2 in myGraph
+added edge from node2 to node3 in myGraph
+added edge from node2 to node4 in myGraph
+added edge from node2 to node5 in myGraph
+added edge from node2 to node6 in myGraph
+added edge from node2 to node7 in myGraph
+added edge from node2 to node8 in myGraph
+added edge from node2 to node9 in myGraph
+added edge from node2 to node10 in myGraph
+added edge from node2 to node11 in myGraph
+added edge from node2 to node12 in myGraph
+added edge from node2 to node13 in myGraph
+added edge from node2 to node14 in myGraph
+added edge from node3 to node3 in myGraph
+added edge from node3 to node4 in myGraph
+added edge from node3 to node5 in myGraph
+added edge from node3 to node6 in myGraph
+added edge from node3 to node7 in myGraph
+added edge from node3 to node8 in myGraph
+added edge from node3 to node9 in myGraph
+added edge from node3 to node10 in myGraph
+added edge from node3 to node11 in myGraph
+added edge from node3 to node12 in myGraph
+added edge from node3 to node13 in myGraph
+added edge from node3 to node14 in myGraph
+added edge from node4 to node4 in myGraph
+added edge from node4 to node5 in myGraph
+added edge from node4 to node6 in myGraph
+added edge from node4 to node7 in myGraph
+added edge from node4 to node8 in myGraph
+added edge from node4 to node9 in myGraph
+added edge from node4 to node10 in myGraph
+added edge from node4 to node11 in myGraph
+added edge from node4 to node12 in myGraph
+added edge from node4 to node13 in myGraph
+added edge from node4 to node14 in myGraph
+added edge from node5 to node5 in myGraph
+added edge from node5 to node6 in myGraph
+added edge from node5 to node7 in myGraph
+added edge from node5 to node8 in myGraph
+added edge from node5 to node9 in myGraph
+added edge from node5 to node10 in myGraph
+added edge from node5 to node11 in myGraph
+added edge from node5 to node12 in myGraph
+added edge from node5 to node13 in myGraph
+added edge from node5 to node14 in myGraph
+added edge from node6 to node6 in myGraph
+added edge from node6 to node7 in myGraph
+added edge from node6 to node8 in myGraph
+added edge from node6 to node9 in myGraph
+added edge from node6 to node10 in myGraph
+added edge from node6 to node11 in myGraph
+added edge from node6 to node12 in myGraph
+added edge from node6 to node13 in myGraph
+added edge from node6 to node14 in myGraph
+added edge from node7 to node7 in myGraph
+added edge from node7 to node8 in myGraph
+added edge from node7 to node9 in myGraph
+added edge from node7 to node10 in myGraph
+added edge from node7 to node11 in myGraph
+added edge from node7 to node12 in myGraph
+added edge from node7 to node13 in myGraph
+added edge from node7 to node14 in myGraph
+added edge from node8 to node8 in myGraph
+added edge from node8 to node9 in myGraph
+added edge from node8 to node10 in myGraph
+added edge from node8 to node11 in myGraph
+added edge from node8 to node12 in myGraph
+added edge from node8 to node13 in myGraph
+added edge from node8 to node14 in myGraph
+added edge from node9 to node9 in myGraph
+added edge from node9 to node10 in myGraph
+added edge from node9 to node11 in myGraph
+added edge from node9 to node12 in myGraph
+added edge from node9 to node13 in myGraph
+added edge from node9 to node14 in myGraph
+added edge from node10 to node10 in myGraph
+added edge from node10 to node11 in myGraph
+added edge from node10 to node12 in myGraph
+added edge from node10 to node13 in myGraph
+added edge from node10 to node14 in myGraph
+added edge from node11 to node11 in myGraph
+added edge from node11 to node12 in myGraph
+added edge from node11 to node13 in myGraph
+added edge from node11 to node14 in myGraph
+added edge from node12 to node12 in myGraph
+added edge from node12 to node13 in myGraph
+added edge from node12 to node14 in myGraph
+added edge from node13 to node13 in myGraph
+added edge from node13 to node14 in myGraph
+added edge from node14 to node14 in myGraph
+
+# Print some stuff
+myGraph contains: node1 node10 node11 node12 node13 node14 node2 node3 node4 node5 node6 node7 node8 node9
+the children of node1 in myGraph are: node1 node10 node11 node12 node13 node2 node3 node4 node5 node6 node7 node8 node9
+the children of node2 in myGraph are: node10 node11 node12 node13 node14 node2 node3 node4 node5 node6 node7 node8 node9
+the children of node3 in myGraph are: node10 node11 node12 node13 node14 node3 node4 node5 node6 node7 node8 node9
+the children of node4 in myGraph are: node10 node11 node12 node13 node14 node4 node5 node6 node7 node8 node9
+the children of node5 in myGraph are: node10 node11 node12 node13 node14 node5 node6 node7 node8 node9
+the children of node6 in myGraph are: node10 node11 node12 node13 node14 node6 node7 node8 node9
+the children of node7 in myGraph are: node10 node11 node12 node13 node14 node7 node8 node9
+the children of node8 in myGraph are: node10 node11 node12 node13 node14 node8 node9
+the children of node9 in myGraph are: node10 node11 node12 node13 node14 node9
+the children of node10 in myGraph are: node10 node11 node12 node13 node14
+the children of node11 in myGraph are: node11 node12 node13 node14
+the children of node12 in myGraph are: node12 node13 node14
+the children of node13 in myGraph are: node13 node14
+the children of node14 in myGraph are: node14
+
+# Find a path
+shortest path in myGraph: node1 node13 node14
