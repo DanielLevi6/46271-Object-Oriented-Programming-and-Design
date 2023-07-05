@@ -1,27 +1,38 @@
 package homework4;
 
-/** The Graph class is an immutable generic class that represents a directed graph.
+import java.util.*;
+
+/** The WeatherDataFactory class is used for creating new LocationWeatherData objects..
 *
-* A directed graph is constructed of nodes, which might be connected through edges.
-* Every edge has a specific direction, from node A to node B.
-*
-* The class provides methods to add nodes and edges to the graph. In addition to methods to
-* get the list of nodes and the list of node's children.
-*
-* Node - the node's class
+* This class provides a method for the create operation.
 */
 public class WeatherDataFactory {
     // Abstraction Function:
-    // A node in the graph is represented as a key of the nodesAdjacencyMap map
-    // An edge from A to B is represented as by the presence of B in A's adjacency set(the value of the map's key A)
+    // 
 
     // Representation invariant:
-    //      name != null
-    //      for every Node n in map's keys:
-    //           n exists in only one copy
-    //      for every set of node's children:
-    //           each child node n exists as only one copy
-	public LocationWeatherData c() {
-		
+    //      
+	
+	private Map<String, LocationWeatherData> location_weather_classes;
+	
+	public WeatherDataFactory() {
+		location_weather_classes = new HashMap<String, LocationWeatherData>();
+		checkRep()
 	}
+	
+	public LocationWeatherData createLocationWeatherData(String new_location_name) {
+		checkRep();
+		LocationWeatherData new_location_weather_data = new LocationWeatherData(new_location_name);
+		checkRep();
+		return new_location_weather_data;
+	}
+	
+    /**
+     * @effects checks the Rep. Invariant on the object, and throws an error accordingly
+     *
+     * @throws AssertionError if the Rep. Invariant was not fulfilled
+     */
+    private void checkRep() {
+        assert this.location_weather_classes != null : "The location list is null";
+    }
 }
