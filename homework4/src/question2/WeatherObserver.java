@@ -1,4 +1,4 @@
-package homework4;
+package question2;
 
 /** The WeatherObserver interface is an interface for user-defined weather observers.
 *
@@ -12,12 +12,12 @@ public interface WeatherObserver {
 
 	/**
 	 * Updating the weather
-	 * @param temperature - the current temperature
-	 * @param humidity - the current humidity
-	 * @param air_pressure - the current air pressure
+	 * @param new_temperature - the current temperature
+	 * @param new_humidity - the current humidity
+	 * @param new_air_pressure - the current air pressure
 	 * 
 	 * @requires humidity >= 0
 	 * @effects updating the data according to the current weather values which has been received
 	 */
-	public void update(double temperature, double humidity, double air_pressure);
+	public void update(double new_temperature, double new_humidity, double new_air_pressure);
 }

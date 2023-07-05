@@ -1,4 +1,4 @@
-package homework4;
+package question2;
 
 /** The LocationWeatherData class extends the WeatherData class and represents the most updated weather data in a specific location.
 *
