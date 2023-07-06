@@ -38,7 +38,7 @@ public class IntegerValue implements Expression {
 	 * @returns String which represent the integer value stored in the class
 	 */
 	public String toString() {
-		return String.valueOf(this.val);
+		return "(" + String.valueOf(this.val) + ")";
 	}
 	
 	

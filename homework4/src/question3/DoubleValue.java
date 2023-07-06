@@ -39,7 +39,7 @@ public class DoubleValue implements Expression {
 	 * @returns String which represent the double value stored in the class
 	 */
 	public String toString() {
-		return String.valueOf(this.val);
+		return "(" + String.valueOf(this.val) + ")";
 	}
 	
 }
